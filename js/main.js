@@ -68,25 +68,39 @@ mainSlider();
 
 
 // owlCarousel
-$('.owl-carouselp').owlCarousel({
+$('.homepage-sliders').owlCarousel({
     loop:true,
     margin:0,
 	items:1,
 	nav:true,
-	navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+	navText:['<i class="fas fa-long-arrow-alt-left"></i>','<i class="fas fa-long-arrow-alt-right"></i>'],
 	dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        767:{
-            items:3
-        },
-        992:{
-            items:5
-        }
-    }
-})
+  
+});
+
+var homePageSlider = $(".homepage-slider-2");
+
+homePageSlider.owlCarousel({
+  loop: true,
+  margin: 0,
+  items: 1,
+  nav: true,
+  navText: ['<i class="fas fa-long-arrow-alt-left"></i>', '<i class="fas fa-long-arrow-alt-right"></i>'],
+  dots: true,
+});
+
+homePageSlider.on('translated.owl.carousel', function (event) {
+  // Remove the class from all elements with the same selector
+  $(".owl-item .welcome-area-text h4").removeClass("bounceIn animated");
+  $(".owl-item .welcome-area-text h1").removeClass("fadeInUp  animated");
+  $(".owl-item .welcome-area-text p").removeClass("fadeInUp  animated");
+
+  // Add the class to the current active element
+  $(".owl-item.active .welcome-area-text h4").addClass("bounceIn  animated");
+  $(".owl-item.active .welcome-area-text h1").addClass("fadeInUp  animated");
+  $(".owl-item.active .welcome-area-text p").addClass("fadeInUp  animated");
+});
+
 // owlCarousel
 $('.product-carousel').owlCarousel({
     loop:true,
@@ -106,7 +120,7 @@ $('.product-carousel').owlCarousel({
             items:4
         }
     }
-})
+});
 
 
 /* magnificPopup img view */
@@ -119,9 +133,21 @@ $('.popup-image').magnificPopup({
 
 /* magnificPopup video view */
 $('.popup-video').magnificPopup({
-	type: 'iframe'
-});
-
+	type: 'iframe',
+	mainClass: 'mfp-fade',
+	removalDelay: 160,
+	preloader: false,
+	fixedContentPos: false,
+	iframe: {
+	  patterns: {
+		youtube: {
+		  index: 'youtube.com/',
+		  id: 'v=',
+		  src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+		}
+	  }
+	}
+  });
 
 // isotop
 $('.grid').imagesLoaded( function() {
@@ -135,6 +161,30 @@ $('.grid').imagesLoaded( function() {
 	  }
 	});
 });
+
+// fliter active isotop
+$('.protfolio-fliter').on( 'click', 'button', function() {
+	var filterValue = $(this).attr('data-filter');
+	$('.protfolio-list').isotope({ 
+		filter: filterValue ,
+		transitionDuration: '0.8s'
+	});
+	$(".protfolio-fliter button").removeClass('active');
+	$(this).addClass('active');
+  });
+
+
+//   masonary active isotop
+  $('.protfolio-list').isotope({
+	itemSelector: '.single-protfolio-item',
+		percentPosition: true,
+		masonry: {
+		  columnWidth: '.single-protfolio-item',
+		  horizontalOrder:true,
+		}
+  });
+
+
 
 // filter items on button click
 $('.portfolio-menu').on( 'click', 'button', function() {
@@ -164,8 +214,74 @@ $.scrollUp({
 	activeOverlay: false, // Set CSS color to display scrollUp active point, e.g '#00FFFF'
 });
 
+// masonary 
+$('.protfolio-list').masonry({
+	horizontalOrder: true,
+});
+// background Video active
+$('.background-video').YTPlayer({});
+// flitering  active
+
+
+
+
+
+
+
+
+
+
+new PerfectScrollbar('#demo', {
+
+    // A list of handlers to scroll the element.
+    handlers: ['click-rail', 'drag-thumb', 'keyboard', 'wheel', 'touch'],
+
+    // This sets threshold for ps--scrolling-x and ps--scrolling-y classes to remain. In the default CSS, they make scrollbars shown regardless of hover state. The unit is millisecond.
+    scrollingThreshold: 1000,
+
+    // The scroll speed applied to mousewheel event.
+    wheelSpeed: 1,
+
+    // If true, when the scroll reaches the end of the side, 
+    // mousewheel event will be propagated to parent element.
+    wheelPropagation: false, 
+
+    // When set to an integer value, the thumb part of the scrollbar
+    // will not shrink below that number of pixels.
+    minScrollbarLength: null,
+
+    // When set to an integer value, the thumb part of the scrollbar 
+    // will not expand over that number of pixels.
+    maxScrollbarLength: null, 
+
+    // When set to true, and only one (vertical or horizontal) scrollbar
+    // is visible then both vertical and horizontal scrolling will affect the scrollbar.
+    useBothWheelAxes: false, 
+
+    // When set to true, the scroll bar in X axis will not be available, 
+    // regardless of the content width.
+    suppressScrollX: false, 
+
+    // When set to true, the scroll bar in Y axis will not be available, 
+    // regardless of the content height.
+    suppressScrollY: false, 
+
+    // true: swipe scrolling will be eased
+    swipeEasing: true,
+
+    // The number of pixels the content width can surpass the 
+    // container width without enabling the X axis scroll bar. 
+    scrollXMarginOffset: 0, 
+
+    // The number of pixels the content height can surpass the 
+    // container height without enabling the Y axis scroll bar. 
+    scrollYMarginOffset: 0
+
+});
 // WOW active
 new WOW().init();
 
 
 })(jQuery);
+
+
