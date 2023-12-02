@@ -55,7 +55,7 @@ body {
 .section-padding {
 	padding: 150px 0;
 }
-<<<<<<< HEAD
+
 ul {
 	list-style: none;
 	padding: 0;
@@ -64,15 +64,7 @@ ul {
 ul li{
     cursor: pointer;
 }
-=======
-a{
-  text-decoration: none;
-}
-a:hover{
-    text-decoration: none;
-}
 
->>>>>>> 2e8c405bcb11d6d1505c73eebcda1b0bdfd89abe
 /* gobal csss */
 .author-img {
 	margin-bottom: 25px;
@@ -209,18 +201,13 @@ a:hover{
 
 /* ===============103============== */
 
-<<<<<<< HEAD
+
 .fix {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: #ddd;
-=======
-.fix{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
+
 .newsletter-bg , .section-114-bg-1 , .single-service-box-114{
     background-image: url('../img/n-bg.jpg');
 }
@@ -336,126 +323,9 @@ a:hover{
     margin-left: 3px;
     transition: 0.45s;
 }
-.single-bordered-box a:hover > span{
+/* .single-bordered-box a:hover > span{
     margin-left: 8px;
->>>>>>> 2e8c405bcb11d6d1505c73eebcda1b0bdfd89abe
-}
-
-.newsletter-bg {
-	position: relative;
-	color: rgb(255, 255, 255);
-	z-index: 1;
-	text-align: center;
-	padding-bottom: 180px;
-}
-.newsletter-bg h2 {
-	text-transform: uppercase;
-	font-size: 28px;
-	font-weight: 900;
-	margin-bottom: 50px;
-}
-.newsletter-bg::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	height: 100%;
-	width: 100%;
-	background: #333;
-	z-index: -1;
-	opacity: 0.7;
-}
-.newsletter-bg .news-letter-form input[type="email"] {
-	background-color: #fff;
-	opacity: 0.5;
-	border: 1px solid #877975;
-	padding: 12px 20px;
-	width: 70%;
-	border-radius: 50px;
-}
-.newsletter-bg .news-letter-form input[type="email"]:focus {
-	outline: none;
-	background: #333;
-	opacity: 0.6;
-}
-.newsletter-bg .news-letter-form input[type="submit"] {
-	background: #2ab89d;
-	color: #fff;
-	border: none;
-	font-size: 15px;
-	font-weight: 800;
-	padding: 13px 30px;
-	width: 27%;
-	border-radius: 50px;
-}
-.news-letter-form form {
-	margin-bottom: 25px;
-}
-.news-letter-form p {
-	font-style: italic;
-}
-.single-bordered-box {
-	float: left;
-	width: 50%;
-	border-left: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
-	border-top: 1px solid #ededed;
-	padding: 50px 80px;
-	text-align: center;
-	min-height: 345px;
-}
-.bordered-box {
-	border-right: 1px solid #ededed;
-	overflow: hidden;
-	margin-top: -250px;
-	position: relative;
-	background-color: #fff;
-	z-index: 9;
-}
-.single-bordered-box h4 {
-	font-size: 20px;
-	text-transform: uppercase;
-	margin-bottom: 25px;
-	font-weight: 900;
-}
-.single-testimonial-box {
-	font-style: italic;
-}
-.author-name {
-	font-weight: 700;
-	margin-top: 20px;
-	color: #000;
-	text-transform: uppercase;
-	font-style: normal;
-}
-.boxed-btn {
-	background: #000;
-	color: #fff;
-	padding: 10px 30px;
-	border-radius: 50px;
-	text-decoration: none;
-	display: inline-block;
-	margin-top: 10px;
-	transition: 0.45s;
-	border: 1px solid transparent;
-	font-weight: 600;
-}
-.boxed-btn:hover {
-	border: 1px solid #000;
-	background-color: #fff;
-	color: #000;
-	padding: 10px 40px;
-	text-decoration: none;
-}
-.single-bordered-box a > span {
-	margin-left: 3px;
-	transition: 0.45s;
-}
-.single-bordered-box a:hover > span {
-	margin-left: 8px;
-}
-
+} */
 /* ===============103============== */
 /* ===============104============== */
 .product-bg {
@@ -1217,8 +1087,7 @@ a:hover{
 .box-btn-115:hover {
     color: #fff;
 }
-<<<<<<< HEAD
-=======
+
 /* ===============104============== */
 
 
@@ -1409,7 +1278,6 @@ a:hover{
     margin-top: 15px;
     border-radius: 50px;
 }
->>>>>>> 2e8c405bcb11d6d1505c73eebcda1b0bdfd89abe
 .box-btn-115 {
     background: #38C696;
     color: #fff;
@@ -1450,17 +1318,13 @@ a:hover{
 }
 .single-pricing-itme-115.theme-3 .bordered-btn-115 {
     border-color: #B179F5;
-<<<<<<< HEAD
     color: #B179F5;
 }
 .single-pricing-itme-115.theme-3.theme-3 .bordered-btn-115:hover {
     background: #B179F5;
 	color: #fff;
-}
-/* ===============115============== */
-=======
-}
-/* ===============115============== */
+}/* ===============115============== */
 
 
->>>>>>> 2e8c405bcb11d6d1505c73eebcda1b0bdfd89abe
+/* ===============115============== */
+
