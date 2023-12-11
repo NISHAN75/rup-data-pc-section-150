@@ -23,6 +23,11 @@ $(window).on('scroll', function () {
 		$(".header-sticky").addClass("sticky");
 	}
 });
+$('.count').counterUp({
+	time: 3000,
+	delay: 30,
+});
+
 
 
 
@@ -183,6 +188,13 @@ $('.protfolio-fliter').on( 'click', 'button', function() {
 		  horizontalOrder:true,
 		}
   });
+  $('.portfolio-list-2').isotope({
+	itemSelector: '.single-protfolio-item',
+		percentPosition: true,
+		masonry: {
+		  columnWidth: '.single-protfolio-item'
+		}
+  });
 
 
 
@@ -198,6 +210,9 @@ $('.portfolio-menu button').on('click', function(event) {
 	$(this).addClass('active');
 	event.preventDefault();
 });
+$(".Vdieo-play-btn-128").modalVideo();
+
+
 
 
 
@@ -278,10 +293,13 @@ new PerfectScrollbar('#demo', {
     scrollYMarginOffset: 0
 
 });
+
 // WOW active
 new WOW().init();
 
 
 })(jQuery);
+
+
 
 
